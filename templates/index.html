@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedals</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css">
+</head>
+<body>
+    <div>
+        <h1>Pedals</h1>
+        <form action="/predict" method="post">
+            <label for="from">from</label>
+            <input type="number" name="from" id="" placeholder="from" min="0.0", max="14.0"><br>
+            <label for="to">to</label>
+            <input type="number" name="to" id="" placeholder="to" min="0.0" max="14.0"><br>
+            <label for="weight">weight</label>
+            <input type="number" name="weight" id="" placeholder="weight" min="0.0" max="1.0"><br>
+            <label for="Unnamed">Unnamed</label>
+            <input type="number" name="Unnamed" id="" placeholder="Unnamed" min="15.0" max="239.0"><br>
+            <label for="week">week</label>
+            <input type="number" name="week" id="" placeholder="week" min="22" max="36"><br>
+            <label for="location">location</label>
+            <input type="number" name="location" id="" placeholder="location" min="0.0" max="14.0"><br>
+            <label for="time">time</label>
+            <input type="number" name="time" id="" placeholder="time" min="0.0" max="14"><br>
+            <input type="submit" name="" id="" value="predict" class="btn btn-block btn-primary"><br>
+            {{prediction}}
+        </form>
+    </div>
+</body>
+</html>
